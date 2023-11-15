@@ -46,3 +46,13 @@ fib_loop:
 
   exit_fib:
     j exit   #Exit fibonacci loop
+
+illegal:
+    li $v0, 4
+    la $a0, error   #Print the error message from the beginning
+    syscall
+    j main   #Prompt user again for input
+
+exit:
+  li $v0, 10
+  syscall   #Exit program
