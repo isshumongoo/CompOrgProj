@@ -37,3 +37,4 @@ fib_loop:
   move $t1, $t2
   move $t2, #t4   #Calculate the next fibonacci number, moving them around afterward
 
+  addi $t3, $t3, 1   #increment the counter
