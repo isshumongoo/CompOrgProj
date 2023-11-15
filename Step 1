@@ -21,3 +21,9 @@ legal:
   move $a0, $t0
   syscall
   j exit   #If the number is legal, it will print to the screen
+
+illegal:
+  li $v0, 4
+  la $a0, error   #Print the error message from the beginning
+  syscall
+  j main   #Prompt user again for input
