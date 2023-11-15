@@ -28,3 +28,9 @@ li $t3, 0   #Counter while going through Fibonacci number
 
 fib_loop:
   bge $t3, $t0, exit_fib   #Exit the loop when fibonacci numbers are printed
+
+  li $v0, 1
+  move $a0, $t1
+  syscall   #Print the current Fibonacci number we're on
+
+  
