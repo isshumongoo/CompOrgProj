@@ -7,8 +7,11 @@ error: .asciiz "\nThat number is ILLEGAL! Try again."
 main: 
   li $v0, 4
   la $a0, prompt
-  syscall   #print the prompt message to the user
+  syscall   #Print the prompt message to the user
 
   li $v0, 5
   syscall
   move $t0, $v0   #Read integer input from the user
+
+  bge $t0, 25, legal
+  j illegal   #Branch away if the number is illegal
