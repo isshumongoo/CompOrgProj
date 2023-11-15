@@ -38,3 +38,8 @@ fib_loop:
   move $t2, #t4   #Calculate the next fibonacci number, moving them around afterward
 
   addi $t3, $t3, 1   #increment the counter
+
+  li $v0, 4
+  la $a0, " "
+  syscall
+  j fib_loop   #Print a space between the fibonacci numbers when printed
