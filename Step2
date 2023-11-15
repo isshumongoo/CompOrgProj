@@ -25,3 +25,6 @@ legal:
 li $t1, 0   #Initializing the first Fibonacci number
 li $t2, 1   #Intiializing the second Fibonacci number
 li $t3, 0   #Counter while going through Fibonacci number
+
+fib_loop:
+  bge $t3, $t0, exit_fib   #Exit the loop when fibonacci numbers are printed
