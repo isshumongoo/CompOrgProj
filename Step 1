@@ -15,3 +15,9 @@ main:
 
   bge $t0, 25, legal
   j illegal   #Branch away if the number is illegal
+
+legal: 
+  il $vi, 1
+  move $a0, $t0
+  syscall
+  j exit   #If the number is legal, it will print to the screen
