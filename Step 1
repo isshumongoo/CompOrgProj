@@ -1,10 +1,14 @@
 .data 
 #prompt message for input, and error message for when the number is illegal
 prompt: .asciiz "Enter a number between 0 and 25: "
-error: .asciiz "\nIllegal number! Please try again"
+error: .asciiz "\nThat number is ILLEGAL! Try again."
 
 .text
 main: 
   li $v0, 4
   la $a0, prompt
-  syscall #print the prompt message to the user
+  syscall   #print the prompt message to the user
+
+  li $v0, 5
+  syscall
+  move $t0, $v0   #Read integer input from the user
