@@ -43,3 +43,6 @@ fib_loop:
   la $a0, " "
   syscall
   j fib_loop   #Print a space between the fibonacci numbers when printed
+
+  exit_fib:
+    j exit   #Exit fibonacci loop
