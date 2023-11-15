@@ -19,5 +19,9 @@ main:
 legal: 
   il $vi, 1
   move $a0, $t0
-  syscall
-  j exit   #If the number is legal, it will print to the screen
+  syscall   #Print the legal number
+
+#Fibonacci sequence calculation and printing for numbers
+li $t1, 0   #Initializing the first Fibonacci number
+li $t2, 1   #Intiializing the second Fibonacci number
+li $t3, 0   #Counter while going through Fibonacci number
