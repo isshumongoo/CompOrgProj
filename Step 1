@@ -1,1 +1,5 @@
+.data 
+  #prompt an input from the user, and make an error message for when the number is illegal
+  prompt: .asciiz "Enter a number between 0 and 25: "
+  error: .asciiz "\nIllegal number! Please try again"
 
